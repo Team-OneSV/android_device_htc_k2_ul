@@ -31,10 +31,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 user_debug=31
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
-
-# In jellybean this is okay, but in cm10.1 use
-# BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
-BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
 
 # fix this up by examining /proc/emmc on a running device
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
